@@ -1,0 +1,101 @@
+在python中，由于短路效应：a and b，a为False，b不会被判断，直接返回a；a为True，表达式的值就取决于b，因此就返回b 。or运算同理，a or b，a为Ture，b不会被判断，直接返回a；a为False，表达式的值就取决于b，因此就返回b 。
+
+Python把0，空字符串和None看成False，其他数值和非空字符串都看成True
+参考C#中对布尔运算and的解释，如果左数的计算结果为 false，它就不会计算右数。
+bool SecondOperand()
+{
+    Console.WriteLine("Second operand is evaluated.");
+    return true;
+}
+
+bool a = true | SecondOperand();
+Console.WriteLine(a);
+// Output:
+// Second operand is evaluated.
+// True
+
+bool b = false | SecondOperand();
+Console.WriteLine(b);
+// Output:
+// Second operand is evaluated.
+// True
+
+参考C#中对布尔运算or的解释，如果 x 或 y 的计算结果为 true，则 x | y 的结果为 true。 否则，结果为 false。
+bool SecondOperand()
+{
+    Console.WriteLine("Second operand is evaluated.");
+    return true;
+}
+
+bool a = false && SecondOperand();
+Console.WriteLine(a);
+// Output:
+// False
+
+bool b = true && SecondOperand();
+Console.WriteLine(b);
+// Output:
+// Second operand is evaluated.
+// True
+
+
+
+
+
+python 取模运算 和 取余数运算
+取模运算的两个操作数都必须是整数，可以是负整数，但是b不可以是0
+当a和b中存在负整数时，首先计算|a|%|b|=c，然后a%b的符号与b一致。
+
+ 
+在python的函数中，有一个bin()函数，直接可以将输入的十进制数，转换成二进制，输出的是str
+
+逻辑运算
+
+And：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Or运算
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Xor运算
+  
+
+
+
+第4章 Python语言的控制流程
+本章节主要讲述的是if /else/elif 语句的用法以及for/while循环的用法。
+以及用break配合if语句来跳出循环；也可以用continue去控制循环里面的内容是否在一个条件没有达成之前继续循环下去。
+同时for循环可以嵌套在另外一个for循环里面
