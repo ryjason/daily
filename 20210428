@@ -1,0 +1,25 @@
+在python中，容器的种类有列表(list)、元组(tuple)、字典(dict)、集合(set)。他们的共同特点是可以放入多个元素，每一个函数的作用和用法都不同。
+
+List（列表函数）
+特点是所有放在这里面的元素都会有顺序
+L = ['Alice', 66, 'Bob', True, 'False', 100]
+从这里可以知道，list是不要求你只能在这里面存放一种特定的数据类型的。
+
+当我们在访问list的时候,和字符串的时候一样，是从0开始的（正序）
+需要注意的是索引访问超出范围的时候，如列表里面只有3 个，但是我们在索引的守候写了print（L[4]），会引起python的错误警告。
+同时，在python 中。List也是可以和裂变一样切片的。原理和用法是一样的。
+names = ['Alice', 'Bob', 'David', 'Ellena']
+sub_names = names[0:2]
+print(sub_names)
+（这里演示的是通过切片来获取list的子列表）
+
+向列表中添加元素可以用append(函数)，insert(位置，函数)方法。但是他们只可以一次添加一个。一次添加多个可以用extend，如：
+
+l=['Alice', 'Bob', 'Candy', 'David', 'Ellena']
+L='Zero', 'Phoebe', 'Gen'
+l.extend(L)
+print(l)
+
+删除可以用pop(位置)
+
+
