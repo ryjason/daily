@@ -1,0 +1,69 @@
+字典（dict）
+d = {
+    'Alice': 45,
+    'Bob': 60,
+    'Candy': 75,
+    'David': 86,
+    'Ellena': 49
+}
+字典存在的意义就是为了有key 和value，以及用他们来做快速的索引。
+同时，字典和其他的“容器”不同的地方在于它必须要有key 和value，字典的定义方法是{ “” },key 和 value 之间同 ：来分割.
+
+dict提供通过key找到对应value的功能，通过d[key]的形式，就可以得到对应的value。如：
+
+d = {
+    'Alice': 45,
+    'Bob': 60,
+    'Candy': 75,
+    'David': 86,
+    'Ellena': 49,
+    'Gaven': 86
+}
+print(d['Bob']) # ==> 60
+print(d['Alice']) # ==> 45
+在dict中的索引方法和list是差不多的，list是通过下标，dict是通过key。也就是说，如果这个key在字典里面不存在的话，python是会报错的。我们可以用if语句判断可以是否在这个字典中在避免出错。如：
+if 'Alice' in d:
+    print(d['Alice']) # ==> 45
+if 'Dodo' in d: # Dodo不存在，所以不会走下面的逻辑
+    print(d['Dodo'])
+
+除了直接在字典中调用这个函数之外，我们还可以用get函数来调取一个key的value：
+print(d.get('Alice')) # ==> 45
+print(d.get('Dodo')) # ==> None
+如果这个函数不存在，会返回none
+
+这是向一个字典添加元素的方法
+d['Dodo'] = 88
+
+我们也可以向字典添加一个list，如：
+d['Mimi'] = [72, 73]
+d['Dodo'] = [88, 90]
+这时候我们就可以向这个list里面用append，insert添加更多东西了
+d['Mimi'].append(75)
+d['Dodo'].append(90)
+
+我们也可以用del向里面删除元素
+
+del dict # 删除字典
+dict.clear() # 清空字典
+del dict['Name'] # 删除键 ‘Name'
+ 也可以用pop
+d = {
+    'Alice': 45,
+    'Bob': 60,
+    'Candy': 75,
+    'David': 86,
+    'Ellena': 49
+}
+print(d) # ==> {'Alice': 45, 'Bob': 60, 'Candy': 75, 'David': 86, 'Ellena': 49}
+alice_score= d.pop('Alice')
+print(alice_score) # ==> 45
+print(d) # ==> {'Bob': 60, 'Candy': 75, 'David': 86, 'Ellena': 49}
+
+
+
+
+
+
+
+
