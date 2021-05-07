@@ -1,0 +1,20 @@
+python的面向对象编程
+
+我们可以用class来定义一个类，比如可以这样定义
+class Person:
+这样就完成了对Person这个类的定义，但是这个类是没有继承任何类的，
+ class Person(object):
+ Class Person():
+
+这三种都是python里面定义class的方法，在python3中这些定义没有区别。但是在Python2中，对于第一种定义的方法，Person类只有有限的几个内建函数'__doc__', '__module__', 'name'，而对于第二种、第三种定义的方法，则会继承Python object对象的更多的内建函数，可以更便捷的操作对象。
+
+Class的里面的东西是可以被多个程序调用的，但是这些程序是不可以反过来改写class里面的内容的。
+
+类(class)是什么
+
+类只是为了定义一些在程序里重复的代码，把这些属性写进这些功能里面。而真正调用他们的是那些功能的是实例。这个过程是面向对象的实例化。
+
+python中，可以通过以下的方式吧已经有的class实例化出来
+xiaohong.name = 'xiaohong'
+xiaohong.sex = 'girl'
+xiaohong.age = 13
