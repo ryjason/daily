@@ -1,0 +1,21 @@
+import tkinter
+from tkinter.constants import CENTER, NW
+root= tkinter.Tk()
+root.title("成绩查询")
+root.geometry('600x700')
+title = tkinter.Label(root, text="欢迎查询成绩",font=('Arial',20) ,width=30,height=2)
+title.pack()
+sr=tkinter.Entry(root, show=None, font=('Arial',14),width=30)
+sr.place(relx=0.5,rely=0.5, anchor=CENTER,y=-250)
+def ins():
+    var = sr.get()
+    t.insert('end', var)
+bc=tkinter.Button(root,text="查询",font=('Arial',16),width=7,height=2)
+bc.place(x=100,y=150,anchor=NW)
+bs=tkinter.Button(root,text="输入",font=('Arial',16),width=7,height=2,command=ins)
+bs.place(x=400,y=150,anchor=NW)
+t = tkinter.Text(root, height=35,width=77)
+t.place(x=30,y=230,anchor=NW)
+
+
+这是界面，用到了python自带的gui---tkinter
