@@ -1,0 +1,5 @@
+fun main() {
+    println("Happy Birthday!")
+}
+# 用fun定义一个函数main，让它去执行下面{}里的内容
+在Kotlin中，也可以使用print来输出想要输出的字符串，不同于printLn的是print不会自动换行。(即使你吧一段话分成了不同的行)
